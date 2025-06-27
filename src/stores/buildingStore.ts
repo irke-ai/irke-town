@@ -37,9 +37,22 @@ export const useBuildingStore = create<BuildingState>()(
       
       addBuilding: (building) => {
         const id = `building-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
+        const newBuilding = { ...building, id }
+        
         set((state) => ({
-          buildings: [...state.buildings, { ...building, id }]
+          buildings: [...state.buildings, newBuilding]
         }))
+        
+        // 건물 상태 자동 전환
+        if (building.status === BuildingStatus.PLANNING) {
+          setTimeout(() => {
+            get().updateBuilding(id, { status: BuildingStatus.BUILDING })
+            
+            setTimeout(() => {
+              get().updateBuilding(id, { status: BuildingStatus.READY })
+            }, 2000)
+          }, 500)
+        }
       },
       
       removeBuilding: (id) => {

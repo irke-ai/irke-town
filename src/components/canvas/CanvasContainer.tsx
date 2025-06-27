@@ -17,6 +17,7 @@ export default function CanvasContainer() {
   const selectedBuildingId = useBuildingStore((state) => state.selectedBuildingId)
   const removeBuilding = useBuildingStore((state) => state.removeBuilding)
   const buildings = useBuildingStore((state) => state.buildings)
+  const updateBuilding = useBuildingStore((state) => state.updateBuilding)
   
   // 테스트용 건물 한 번만 추가
   const initOnce = useRef(false)

@@ -518,3 +518,14 @@ Import trace for requested module:
  ✓ Compiled /_not-found in 1591ms (1755 modules)
  GET /.well-known/appspecific/com.chrome.devtools.json 404 in 4712ms
  ✓ Compiled in 1107ms (1766 modules)
+ GET /town/123 200 in 174ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 948ms (1755 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1196ms
+ ✓ Compiled in 1796ms (1752 modules)
+ ✓ Compiled in 878ms (1752 modules)
+ GET /town/123 200 in 263ms
+ ✓ Compiled in 961ms (1766 modules)
+ ✓ Compiled in 491ms (1766 modules)
+ ✓ Compiled in 488ms (1752 modules)
+ ✓ Compiled in 436ms (1766 modules)

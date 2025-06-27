@@ -35,6 +35,11 @@ export interface BuildingTemplate {
   width: number
   height: number
   color: string  // 기본 색상
+  colors?: {
+    primary: number    // Pixi.js hex color
+    secondary: number  // 건물 커플 색상
+    outline: number    // 테두리 색상
+  }
 }
 
 export const BUILDING_TEMPLATES: Record<BuildingType, BuildingTemplate> = {
@@ -45,7 +50,12 @@ export const BUILDING_TEMPLATES: Record<BuildingType, BuildingTemplate> = {
     icon: '🔌',
     width: 2,
     height: 2,
-    color: '#3b82f6' // blue-500
+    color: '#3b82f6', // blue-500
+    colors: {
+      primary: 0x3B82F6,    // blue-500
+      secondary: 0x2563EB,  // blue-600
+      outline: 0x1D4ED8,    // blue-700
+    }
   },
   [BuildingType.DATABASE]: {
     type: BuildingType.DATABASE,
@@ -54,7 +64,12 @@ export const BUILDING_TEMPLATES: Record<BuildingType, BuildingTemplate> = {
     icon: '💾',
     width: 3,
     height: 2,
-    color: '#10b981' // emerald-500
+    color: '#10b981', // emerald-500
+    colors: {
+      primary: 0x10B981,    // emerald-500
+      secondary: 0x059669,  // emerald-600
+      outline: 0x047857,    // emerald-700
+    }
   },
   [BuildingType.FRONTEND]: {
     type: BuildingType.FRONTEND,
@@ -63,7 +78,12 @@ export const BUILDING_TEMPLATES: Record<BuildingType, BuildingTemplate> = {
     icon: '🖥️',
     width: 2,
     height: 3,
-    color: '#f59e0b' // amber-500
+    color: '#f59e0b', // amber-500
+    colors: {
+      primary: 0xF59E0B,    // amber-500
+      secondary: 0xD97706,  // amber-600
+      outline: 0xB45309,    // amber-700
+    }
   }
 }
 
