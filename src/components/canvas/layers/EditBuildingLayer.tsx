@@ -11,13 +11,19 @@ import { STATUS_COLORS, BUILDING_TEMPLATES } from '@/types/building'
 export default function EditBuildingLayer() {
   const buildings = useBuildingStore((state) => state.buildings)
   const selectedBuildingId = useBuildingStore((state) => state.selectedBuildingId)
+  const selectedBuildingIds = useBuildingStore((state) => state.selectedBuildingIds)
   const selectBuilding = useBuildingStore((state) => state.selectBuilding)
+  const toggleBuildingSelection = useBuildingStore((state) => state.toggleBuildingSelection)
   const hoverBuilding = useBuildingStore((state) => state.hoverBuilding)
   const moveBuilding = useBuildingStore((state) => state.moveBuilding)
   const isPositionOccupied = useBuildingStore((state) => state.isPositionOccupied)
   const startDragging = useBuildingStore((state) => state.startDragging)
   const stopDragging = useBuildingStore((state) => state.stopDragging)
   const editMode = useUIStore((state) => state.editMode)
+  const connectionMode = useUIStore((state) => state.connectionMode)
+  const connectingFromBuildingId = useBuildingStore((state) => state.connectingFromBuildingId)
+  const startConnecting = useBuildingStore((state) => state.startConnecting)
+  const addConnection = useBuildingStore((state) => state.addConnection)
   
   
   const [isDragging, setIsDragging] = useState(false)
@@ -28,12 +34,62 @@ export default function EditBuildingLayer() {
   const handleBuildingPointerDown = useCallback((buildingId: string, event: FederatedPointerEvent) => {
     event.stopPropagation()
     
+    
     const building = buildings.find(b => b.id === buildingId)
     if (!building) return
     
     const clickPosition = { x: event.data.global.x, y: event.data.global.y }
+    const nativeEvent = event.nativeEvent || event
+    const isShiftPressed = nativeEvent.shiftKey
     
-    if (selectedBuildingId === buildingId) {
+    // 우클릭 처리
+    if (event.data.button === 2) {
+      const isSelected = selectedBuildingIds.includes(buildingId)
+      
+      if (isSelected) {
+        // 선택된 건물에서 우클릭
+        const setContextMenu = useUIStore.getState().setContextMenu
+        
+        // 복수 선택된 경우
+        if (selectedBuildingIds.length >= 2) {
+          setContextMenu({ 
+            position: clickPosition, 
+            buildingId,
+            multiSelect: true,
+            selectedIds: selectedBuildingIds
+          })
+        } else if (selectedBuildingIds.length === 1) {
+          // 단일 선택된 경우 삭제 메뉴 표시
+          setContextMenu({ position: clickPosition, buildingId })
+        }
+      }
+      return
+    }
+    
+    // 연결 모드일 때
+    if (connectionMode) {
+      if (!connectingFromBuildingId) {
+        // 첫 번째 건물 선택
+        startConnecting(buildingId)
+        selectBuilding(buildingId, clickPosition)
+      } else if (connectingFromBuildingId !== buildingId) {
+        // 두 번째 건물 선택 - 연결 생성
+        addConnection(connectingFromBuildingId, buildingId)
+        startConnecting(null)
+        selectBuilding(null)
+      } else {
+        // 같은 건물 다시 클릭 - 취소
+        startConnecting(null)
+        selectBuilding(null)
+      }
+      return
+    }
+    
+    // 일반 편집 모드
+    if (isShiftPressed) {
+      // Shift 클릭 - 복수 선택
+      toggleBuildingSelection(buildingId, true, clickPosition)
+    } else if (selectedBuildingId === buildingId && selectedBuildingIds.length === 1) {
       // 이미 선택된 건물 - 드래그 준비
       setDraggedBuildingId(buildingId)
       dragStartRef.current = {
@@ -44,12 +100,12 @@ export default function EditBuildingLayer() {
       }
     } else {
       // 새로운 건물 선택
-      selectBuilding(buildingId, clickPosition)
+      toggleBuildingSelection(buildingId, false, clickPosition)
     }
-  }, [buildings, selectedBuildingId, selectBuilding])
+  }, [buildings, selectedBuildingId, selectedBuildingIds, selectBuilding, toggleBuildingSelection, connectionMode, connectingFromBuildingId, startConnecting, addConnection])
 
   const handlePointerMove = useCallback((event: FederatedPointerEvent) => {
-    if (!draggedBuildingId || !dragStartRef.current) return
+    if (!draggedBuildingId || !dragStartRef.current || connectionMode) return
     
     const currentPos = { x: event.data.global.x, y: event.data.global.y }
     const distance = Math.sqrt(
@@ -90,7 +146,7 @@ export default function EditBuildingLayer() {
         setDraggedPosition(newGridPos)
       }
     }
-  }, [draggedBuildingId, isDragging, buildings, isPositionOccupied, startDragging])
+  }, [draggedBuildingId, isDragging, buildings, isPositionOccupied, startDragging, connectionMode])
 
   const handlePointerUp = useCallback(() => {
     if (isDragging && draggedBuildingId && draggedPosition) {
@@ -125,7 +181,7 @@ export default function EditBuildingLayer() {
         const isBeingDragged = isDragging && draggedBuildingId === building.id
         const displayPos = isBeingDragged && draggedPosition ? draggedPosition : { x: building.gridX, y: building.gridY }
         const pos = gridToScreen(displayPos.x + 1, displayPos.y + 1)
-        const isSelected = selectedBuildingId === building.id
+        const isSelected = selectedBuildingIds.includes(building.id)
         
         const hitArea = new Rectangle(
           -building.width * 32,
@@ -140,9 +196,10 @@ export default function EditBuildingLayer() {
             x={pos.x}
             y={pos.y}
             eventMode="static"
-            cursor={isSelected ? (isBeingDragged ? "grabbing" : "grab") : "pointer"}
+            cursor={connectionMode ? "crosshair" : (isSelected ? (isBeingDragged ? "grabbing" : "grab") : "pointer")}
             hitArea={hitArea}
             pointerdown={(event) => handleBuildingPointerDown(building.id, event)}
+            rightdown={(event) => handleBuildingPointerDown(building.id, event)}
             pointerover={() => hoverBuilding(building.id)}
             pointerout={() => hoverBuilding(null)}
             alpha={isBeingDragged ? 0.6 : 1}
@@ -228,6 +285,7 @@ export default function EditBuildingLayer() {
                     building.height * 64
                   )
                   g.endFill()
+                  
                 }
               }}
             />

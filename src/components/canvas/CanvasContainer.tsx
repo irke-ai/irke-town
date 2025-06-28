@@ -7,6 +7,10 @@ import { BuildingType, BuildingStatus, BUILDING_TEMPLATES } from '@/types/buildi
 import { DynamicCanvas } from '@/lib/dynamic'
 import BuildingPalette from '@/components/ui/BuildingPalette'
 import EditModeToggle from '@/components/ui/EditModeToggle'
+import ConnectionModeToggle from '@/components/ui/ConnectionModeToggle'
+import ConnectionInfo from '@/components/ui/ConnectionInfo'
+import SaveLoadMenu from '@/components/ui/SaveLoadMenu'
+import { TownStorage } from '@/lib/townStorage'
 
 export default function CanvasContainer() {
   const zoom = useUIStore((state) => state.zoom)
@@ -17,7 +21,9 @@ export default function CanvasContainer() {
   const selectedBuildingId = useBuildingStore((state) => state.selectedBuildingId)
   const removeBuilding = useBuildingStore((state) => state.removeBuilding)
   const buildings = useBuildingStore((state) => state.buildings)
+  const connections = useBuildingStore((state) => state.connections)
   const updateBuilding = useBuildingStore((state) => state.updateBuilding)
+  const addConnection = useBuildingStore((state) => state.addConnection)
   
   // 테스트용 건물 한 번만 추가
   const initOnce = useRef(false)
@@ -78,11 +84,54 @@ export default function CanvasContainer() {
     }
   }, [zoom, setZoom])
   
-  // Delete 키로 선택된 건물 삭제
+  // 자동 저장 (30초마다)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const sessionId = TownStorage.getCurrentSession()
+      if (sessionId) {
+        TownStorage.autoSave(buildings, connections)
+      }
+    }, 30000) // 30초
+    
+    return () => clearInterval(interval)
+  }, [buildings, connections])
+  
+  // 키보드 단축키 처리
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Delete' && selectedBuildingId) {
-        removeBuilding(selectedBuildingId)
+      // Delete 키로 선택된 항목 삭제
+      if (e.key === 'Delete') {
+        const selectedConnectionId = useBuildingStore.getState().selectedConnectionId
+        if (selectedBuildingId) {
+          removeBuilding(selectedBuildingId)
+        } else if (selectedConnectionId) {
+          useBuildingStore.getState().removeConnection(selectedConnectionId)
+        }
+      }
+      
+      // R 키로 선택된 건물 회전
+      if (e.key === 'r' || e.key === 'R') {
+        const editMode = useUIStore.getState().editMode
+        if (editMode === 'edit' && selectedBuildingId) {
+          useBuildingStore.getState().rotateBuilding(selectedBuildingId)
+        }
+      }
+      
+      // Escape 키로 모드 취소
+      if (e.key === 'Escape') {
+        const connectionMode = useUIStore.getState().connectionMode
+        const placingBuildingType = useBuildingStore.getState().placingBuildingType
+        
+        // 연결 모드 취소
+        if (connectionMode) {
+          useUIStore.getState().setConnectionMode(false)
+          useBuildingStore.getState().startConnecting(null)
+        }
+        
+        // 건물 배치 모드 취소
+        if (placingBuildingType) {
+          useBuildingStore.getState().setPlacingBuildingType(null)
+        }
       }
     }
     
@@ -125,7 +174,11 @@ export default function CanvasContainer() {
   }
 
   return (
-    <div className="w-full h-full relative" onClick={handleCanvasClick}>
+    <div 
+      className="w-full h-full relative" 
+      onClick={handleCanvasClick} 
+      onContextMenu={(e) => e.preventDefault()}
+    >
       <Suspense fallback={
         <div className="w-full h-full bg-gray-100 flex items-center justify-center">
           <p className="text-gray-400">캔버스 로딩 중...</p>
@@ -140,12 +193,15 @@ export default function CanvasContainer() {
       
       {/* UI 패널들 */}
       <BuildingPalette />
+      <ConnectionInfo />
+      <SaveLoadMenu />
       
       {/* 하단 컨트롤 */}
       <div className="absolute bottom-4 right-4 flex gap-2">
         {/* 편집 모드 토글 */}
-        <div className="bg-white rounded-lg shadow-lg p-2">
+        <div className="bg-white rounded-lg shadow-lg p-2 flex gap-2">
           <EditModeToggle />
+          <ConnectionModeToggle />
         </div>
         
         {/* 줌 컨트롤 */}
@@ -177,6 +233,7 @@ export default function CanvasContainer() {
           </button>
         </div>
       </div>
+      
     </div>
   )
 }

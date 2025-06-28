@@ -30,9 +30,6 @@ export default function Header() {
       {/* 액션 버튼 */}
       {isEditor && (
         <div className="flex items-center space-x-3">
-          <button className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900">
-            저장
-          </button>
           <button className="btn-primary text-sm">
             배포
           </button>

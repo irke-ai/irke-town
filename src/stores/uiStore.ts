@@ -18,6 +18,24 @@ interface UIStore {
   setEditMode: (mode: 'preview' | 'edit') => void
   toggleEditMode: () => void
   
+  // 연결 모드
+  connectionMode: boolean
+  setConnectionMode: (enabled: boolean) => void
+  
+  // 컨텍스트 메뉴
+  contextMenu: { 
+    position: { x: number; y: number }
+    buildingId: string
+    multiSelect?: boolean
+    selectedIds?: string[]
+  } | null
+  setContextMenu: (menu: { 
+    position: { x: number; y: number }
+    buildingId: string
+    multiSelect?: boolean
+    selectedIds?: string[]
+  } | null) => void
+  
   // 패널 표시 상태
   showToolPanel: boolean
   showPropertyPanel: boolean
@@ -38,6 +56,12 @@ export const useUIStore = create<UIStore>((set) => ({
   editMode: 'preview',
   setEditMode: (mode) => set({ editMode: mode }),
   toggleEditMode: () => set((state) => ({ editMode: state.editMode === 'preview' ? 'edit' : 'preview' })),
+  
+  connectionMode: false,
+  setConnectionMode: (enabled) => set({ connectionMode: enabled }),
+  
+  contextMenu: null,
+  setContextMenu: (menu) => set({ contextMenu: menu }),
   
   showToolPanel: true,
   showPropertyPanel: true,

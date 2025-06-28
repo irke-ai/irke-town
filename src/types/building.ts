@@ -20,6 +20,7 @@ export interface Building {
   status: BuildingStatus
   width: number  // 그리드 단위
   height: number // 그리드 단위
+  rotation: number  // 0, 90, 180, 270
   metadata?: {
     description?: string
     techStack?: string[]
@@ -35,6 +36,10 @@ export interface BuildingTemplate {
   width: number
   height: number
   color: string  // 기본 색상
+  ports: {
+    input: boolean    // 입구 있음
+    output: boolean   // 출구 있음
+  }
   colors?: {
     primary: number    // Pixi.js hex color
     secondary: number  // 건물 커플 색상
@@ -51,6 +56,10 @@ export const BUILDING_TEMPLATES: Record<BuildingType, BuildingTemplate> = {
     width: 2,
     height: 2,
     color: '#3b82f6', // blue-500
+    ports: {
+      input: true,   // API는 입구와 출구 모두 있음
+      output: true
+    },
     colors: {
       primary: 0x3B82F6,    // blue-500
       secondary: 0x2563EB,  // blue-600
@@ -65,6 +74,10 @@ export const BUILDING_TEMPLATES: Record<BuildingType, BuildingTemplate> = {
     width: 3,
     height: 2,
     color: '#10b981', // emerald-500
+    ports: {
+      input: true,   // Database는 입구만 있음 (데이터 저장)
+      output: false
+    },
     colors: {
       primary: 0x10B981,    // emerald-500
       secondary: 0x059669,  // emerald-600
@@ -79,6 +92,10 @@ export const BUILDING_TEMPLATES: Record<BuildingType, BuildingTemplate> = {
     width: 2,
     height: 3,
     color: '#f59e0b', // amber-500
+    ports: {
+      input: false,  // Frontend는 출구만 있음 (사용자에게 제공)
+      output: true
+    },
     colors: {
       primary: 0xF59E0B,    // amber-500
       secondary: 0xD97706,  // amber-600

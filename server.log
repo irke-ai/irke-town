@@ -6,526 +6,254 @@
   - Local:        http://localhost:3000
 
  ✓ Starting...
- ✓ Ready in 4.1s
- ○ Compiling /test ...
- ✓ Compiled /test in 4.5s (661 modules)
- GET /test 200 in 4817ms
- ✓ Compiled in 416ms (236 modules)
+ ✓ Ready in 1859ms
+ ○ Compiling / ...
+ ✓ Compiled / in 5.4s (703 modules)
+ HEAD / 200 in 5625ms
+ ✓ Compiled in 223ms (256 modules)
  ○ Compiling /town/[id] ...
- ✓ Compiled /town/[id] in 3.3s (1526 modules)
- GET /town/123 200 in 3886ms
- ✓ Compiled in 671ms (1540 modules)
- ✓ Compiled in 619ms (1540 modules)
- ✓ Compiled in 495ms (1540 modules)
- ✓ Compiled in 529ms (1540 modules)
- ✓ Compiled in 387ms (1540 modules)
- ✓ Compiled in 383ms (1540 modules)
- GET /test 200 in 80ms
- GET /town/123 200 in 50ms
- ✓ Compiled in 701ms (1526 modules)
- GET /town/123 200 in 78ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 1227ms (1526 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1386ms
- ✓ Compiled in 660ms (1537 modules)
- ✓ Compiled in 430ms (1537 modules)
- ✓ Compiled in 299ms (1537 modules)
- ✓ Compiled in 277ms (1537 modules)
- ✓ Compiled in 347ms (1537 modules)
- ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- ✓ Compiled in 909ms (1537 modules)
- GET /town/123 200 in 238ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 954ms (1526 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1067ms
- ✓ Compiled in 408ms (1540 modules)
- ✓ Compiled in 518ms (1523 modules)
- ✓ Compiled in 230ms (1523 modules)
- ✓ Compiled in 207ms (1523 modules)
- ✓ Compiled in 362ms (1537 modules)
- ✓ Compiled in 436ms (1537 modules)
- ✓ Compiled in 461ms (1537 modules)
- ✓ Compiled in 346ms (1537 modules)
- ✓ Compiled in 346ms (1537 modules)
- ✓ Compiled in 323ms (1537 modules)
- ✓ Compiled in 368ms (1537 modules)
- GET /town/123 200 in 103ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 647ms (1526 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 729ms
- ✓ Compiled in 575ms (1537 modules)
- ✓ Compiled in 547ms (1537 modules)
- ✓ Compiled in 327ms (1537 modules)
- ✓ Compiled in 345ms (1537 modules)
- GET /town/123 200 in 114ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 1054ms (1526 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1118ms
- ✓ Compiled in 380ms (1540 modules)
- ✓ Compiled in 315ms (1540 modules)
- ✓ Compiled in 717ms (1540 modules)
- ✓ Compiled in 349ms (1537 modules)
- ✓ Compiled in 332ms (1537 modules)
- ✓ Compiled in 303ms (1537 modules)
- GET /town/123 200 in 133ms
- ✓ Compiled /_not-found in 419ms (1526 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 509ms
- ✓ Compiled in 393ms (1540 modules)
- ✓ Compiled in 387ms (1538 modules)
- ✓ Compiled in 325ms (1538 modules)
- ✓ Compiled in 285ms (1535 modules)
- ✓ Compiled in 349ms (1535 modules)
- GET /town/123 200 in 71ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 515ms (1524 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 593ms
- ✓ Compiled in 614ms (1538 modules)
- ✓ Compiled in 326ms (1538 modules)
- ✓ Compiled in 281ms (1538 modules)
- ✓ Compiled in 343ms (1538 modules)
- GET /town/123 200 in 97ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 81ms
- ✓ Compiled in 490ms (1538 modules)
- ✓ Compiled in 367ms (1538 modules)
+ ✓ Compiled /town/[id] in 1784ms (1548 modules)
+ GET /town/123 200 in 2175ms
+ ✓ Compiled in 471ms (1557 modules)
+ ✓ Compiled in 293ms (1557 modules)
+ ✓ Compiled in 269ms (1557 modules)
+ ✓ Compiled /_not-found in 447ms (1546 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 549ms
+ ✓ Compiled in 469ms (1543 modules)
+ ✓ Compiled in 217ms (1543 modules)
+ ✓ Compiled in 286ms (1557 modules)
+ GET /town/123 200 in 95ms
+ ✓ Compiled /_not-found in 199ms (1546 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 264ms
+ ✓ Compiled in 203ms (1546 modules)
+ ✓ Compiled in 203ms (1546 modules)
+ ✓ Compiled in 170ms (1546 modules)
+ ✓ Compiled in 240ms (1543 modules)
  GET /town/123 200 in 75ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 95ms
- ✓ Compiled in 493ms (1538 modules)
- ✓ Compiled in 395ms (1538 modules)
- ✓ Compiled in 438ms (1538 modules)
- ✓ Compiled in 857ms (1535 modules)
- GET /town/123 200 in 122ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 552ms (1524 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 670ms
- ✓ Compiled in 349ms (1524 modules)
- ✓ Compiled in 576ms (1538 modules)
- GET /town/123 200 in 95ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 184ms
- ✓ Compiled in 742ms (1538 modules)
- ✓ Compiled in 473ms (1538 modules)
- ✓ Compiled in 221ms (1524 modules)
- ✓ Compiled in 427ms (1538 modules)
- ✓ Compiled in 397ms (1535 modules)
- ✓ Compiled in 441ms (1535 modules)
- GET /town/123 200 in 144ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 885ms (1524 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1036ms
- ✓ Compiled in 475ms (1538 modules)
- ✓ Compiled in 922ms (1538 modules)
- ✓ Compiled in 360ms (1538 modules)
- ✓ Compiled in 526ms (1535 modules)
- ✓ Compiled in 400ms (1535 modules)
- ✓ Compiled in 676ms (1535 modules)
- ✓ Compiled in 351ms (1535 modules)
- ✓ Compiled in 314ms (1535 modules)
- ✓ Compiled in 704ms (1535 modules)
- ✓ Compiled in 354ms (1535 modules)
- GET /town/123 200 in 141ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 586ms (1524 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 672ms
- ✓ Compiled in 547ms (1538 modules)
- ✓ Compiled in 419ms (1538 modules)
- GET /town/123 200 in 89ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 68ms
- ✓ Compiled in 479ms (1538 modules)
- ✓ Compiled in 363ms (1538 modules)
- GET /town/123 200 in 82ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 148ms
- ✓ Compiled in 631ms (1535 modules)
- GET /town/123 200 in 87ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 625ms (1524 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 774ms
- ✓ Compiled in 670ms (1524 modules)
- GET /town/123 200 in 95ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 56ms
- ✓ Compiled in 257ms (1524 modules)
- ✓ Compiled in 516ms (1538 modules)
- ✓ Compiled in 400ms (1535 modules)
- ✓ Compiled in 454ms (1535 modules)
- ✓ Compiled in 1181ms (1535 modules)
- ✓ Compiled in 603ms (1535 modules)
- ✓ Compiled in 774ms (1535 modules)
- ✓ Compiled in 369ms (1535 modules)
- ✓ Compiled in 449ms (1535 modules)
- ✓ Compiled in 405ms (1535 modules)
- GET /town/123 200 in 214ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 1011ms (1524 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1185ms
- ✓ Compiled in 532ms (1521 modules)
- ✓ Compiled in 219ms (1521 modules)
- ✓ Compiled in 200ms (1521 modules)
- ✓ Compiled in 3.2s (679 modules)
- ✓ Compiled in 648ms (1397 modules)
- ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- GET /town/123 200 in 211ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 1096ms (1386 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1303ms
- ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- ✓ Compiled in 1452ms (1538 modules)
- GET /town/123 200 in 783ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 135ms
- ✓ Compiled in 462ms (1538 modules)
- ✓ Compiled in 370ms (1538 modules)
- ✓ Compiled in 403ms (1535 modules)
- ✓ Compiled in 487ms (1535 modules)
- GET /town/123 200 in 116ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 775ms (1524 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 912ms
- ✓ Compiled in 547ms (1538 modules)
- ✓ Compiled in 362ms (1535 modules)
- ✓ Compiled in 495ms (1535 modules)
- ✓ Compiled in 547ms (1535 modules)
- GET /town/123 200 in 158ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 783ms (1524 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 878ms
- ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- ✓ Compiled in 3.8s (1397 modules)
- GET /town/123 200 in 629ms
- ✓ Compiled /_not-found in 350ms (1386 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 410ms
- ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- ✓ Compiled in 384ms (1538 modules)
- GET /town/123 200 in 304ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 64ms
- ✓ Compiled in 362ms (1538 modules)
- ✓ Compiled in 531ms (1538 modules)
- ⨯ ./src/components/canvas/layers/BuildingClickLayerFixed.tsx
+ ✓ Compiled /_not-found in 210ms (1546 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 246ms
+ ✓ Compiled in 191ms (1546 modules)
+ ⨯ ./src/stores/buildingStore.ts
 Error: 
-  [31mx[0m Unexpected token `Container`. Expected jsx identifier
-     ,-[[36;1;4m/home/irke/irke-town/src/components/canvas/layers/BuildingClickLayerFixed.tsx[0m:144:1]
- [2m144[0m |   ), [])
- [2m145[0m | 
- [2m146[0m |   return (
- [2m147[0m |     <Container
-     : [31;1m     ^^^^^^^^^[0m
- [2m148[0m |       eventMode="static"
- [2m149[0m |       onpointermove={handlePointerMove}
- [2m150[0m |       onpointerup={handlePointerUp}
+  [31mx[0m Expression expected
+     ,-[[36;1;4m/home/irke/irke-town/src/stores/buildingStore.ts[0m:169:1]
+ [2m169[0m |                 }))
+ [2m170[0m |               }
+ [2m171[0m |             }
+ [2m172[0m |           })
+     : [31;1m           ^[0m
+ [2m173[0m |         }
+ [2m174[0m |       },
+ [2m175[0m |       
      `----
 
 Caused by:
     Syntax Error
 
 Import trace for requested module:
-./src/components/canvas/layers/BuildingClickLayerFixed.tsx
-./src/components/canvas/TownCanvas.tsx
-./src/lib/dynamic.ts
+./src/stores/buildingStore.ts
 ./src/components/canvas/CanvasContainer.tsx
- ⨯ ./src/components/canvas/layers/BuildingClickLayerFixed.tsx
-Error: 
-  [31mx[0m Unexpected token `Container`. Expected jsx identifier
-     ,-[[36;1;4m/home/irke/irke-town/src/components/canvas/layers/BuildingClickLayerFixed.tsx[0m:144:1]
- [2m144[0m |   ), [])
- [2m145[0m | 
- [2m146[0m |   return (
- [2m147[0m |     <Container
-     : [31;1m     ^^^^^^^^^[0m
- [2m148[0m |       eventMode="static"
- [2m149[0m |       onpointermove={handlePointerMove}
- [2m150[0m |       onpointerup={handlePointerUp}
-     `----
-
-Caused by:
-    Syntax Error
-
-Import trace for requested module:
-./src/components/canvas/layers/BuildingClickLayerFixed.tsx
-./src/components/canvas/TownCanvas.tsx
-./src/lib/dynamic.ts
-./src/components/canvas/CanvasContainer.tsx
- ⨯ ./src/components/canvas/layers/BuildingClickLayerFixed.tsx
-Error: 
-  [31mx[0m Unexpected token `Container`. Expected jsx identifier
-     ,-[[36;1;4m/home/irke/irke-town/src/components/canvas/layers/BuildingClickLayerFixed.tsx[0m:144:1]
- [2m144[0m |   ), [])
- [2m145[0m | 
- [2m146[0m |   return (
- [2m147[0m |     <Container
-     : [31;1m     ^^^^^^^^^[0m
- [2m148[0m |       eventMode="static"
- [2m149[0m |       onpointermove={handlePointerMove}
- [2m150[0m |       onpointerup={handlePointerUp}
-     `----
-
-Caused by:
-    Syntax Error
-
-Import trace for requested module:
-./src/components/canvas/layers/BuildingClickLayerFixed.tsx
-./src/components/canvas/TownCanvas.tsx
-./src/lib/dynamic.ts
-./src/components/canvas/CanvasContainer.tsx
- ⨯ ./src/components/canvas/layers/BuildingClickLayerFixed.tsx
-Error: 
-  [31mx[0m Unexpected token `Container`. Expected jsx identifier
-     ,-[[36;1;4m/home/irke/irke-town/src/components/canvas/layers/BuildingClickLayerFixed.tsx[0m:144:1]
- [2m144[0m |   ), [])
- [2m145[0m | 
- [2m146[0m |   return (
- [2m147[0m |     <Container
-     : [31;1m     ^^^^^^^^^[0m
- [2m148[0m |       eventMode="static"
- [2m149[0m |       onpointermove={handlePointerMove}
- [2m150[0m |       onpointerup={handlePointerUp}
-     `----
-
-Caused by:
-    Syntax Error
-
-Import trace for requested module:
-./src/components/canvas/layers/BuildingClickLayerFixed.tsx
-./src/components/canvas/TownCanvas.tsx
-./src/lib/dynamic.ts
-./src/components/canvas/CanvasContainer.tsx
- ✓ Compiled in 1035ms (1535 modules)
- ✓ Compiled in 367ms (1535 modules)
- GET /town/123 200 in 111ms
- ✓ Compiled /_not-found in 471ms (1524 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 545ms
- ✓ Compiled in 579ms (1538 modules)
- ✓ Compiled in 447ms (1535 modules)
- ✓ Compiled in 372ms (1535 modules)
- GET /town/123 200 in 84ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 2.9s (1524 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 2996ms
- ✓ Compiled in 655ms (1538 modules)
- ✓ Compiled in 375ms (1538 modules)
- GET /town/123 200 in 125ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 73ms
- ✓ Compiled in 416ms (1538 modules)
- ✓ Compiled in 249ms (679 modules)
- ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- ✓ Compiled in 756ms (1397 modules)
- GET /town/123 200 in 336ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 631ms (1386 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 727ms
- ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- ✓ Compiled in 420ms (1538 modules)
- GET /town/123 200 in 304ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 62ms
- GET /town/123 200 in 67ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 101ms
- ✓ Compiled in 572ms (1538 modules)
- GET /town/123 200 in 155ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 172ms
- ✓ Compiled in 255ms (681 modules)
- ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- ✓ Compiled in 629ms (1400 modules)
- GET /town/123 200 in 419ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 163ms
- ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- ✓ Compiled in 355ms (1402 modules)
- GET /town/123 200 in 290ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 106ms
- GET /town/123 200 in 102ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 124ms
- ✓ Compiled in 585ms (1402 modules)
- ✓ Compiled in 307ms (1402 modules)
- ✓ Compiled in 377ms (1399 modules)
- ✓ Compiled in 433ms (1399 modules)
- ✓ Compiled in 700ms (1385 modules)
- ✓ Compiled in 218ms (1385 modules)
- ✓ Compiled in 198ms (611 modules)
- ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- ✓ Compiled in 779ms (1397 modules)
- GET /town/123 200 in 503ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 559ms (1386 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 728ms
- ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- ✓ Compiled in 840ms (1540 modules)
- GET /town/123 200 in 447ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 126ms
- ✓ Compiled in 374ms (1540 modules)
- ✓ Compiled in 428ms (1542 modules)
- ✓ Compiled in 462ms (1540 modules)
- ✓ Compiled in 255ms (680 modules)
- ✓ Compiled in 706ms (1537 modules)
- ✓ Compiled in 544ms (1539 modules)
- GET /town/123 200 in 174ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 822ms (1528 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 984ms
- ✓ Compiled in 480ms (1542 modules)
- ✓ Compiled in 212ms (681 modules)
- ✓ Compiled in 551ms (1539 modules)
- ✓ Compiled in 435ms (1541 modules)
- ✓ Compiled in 416ms (1541 modules)
- ✓ Compiled in 2.9s (1541 modules)
- GET /town/123 200 in 146ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 3.4s (1530 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 3577ms
- ✓ Compiled in 479ms (1544 modules)
- ✓ Compiled in 714ms (1541 modules)
- ✓ Compiled in 325ms (1541 modules)
- ✓ Compiled in 323ms (1541 modules)
- GET /town/123 200 in 202ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 1026ms (1530 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1123ms
- ✓ Compiled in 585ms (1544 modules)
- ✓ Compiled in 580ms (1541 modules)
- ✓ Compiled in 443ms (1541 modules)
- ✓ Compiled in 431ms (1541 modules)
- ✓ Compiled in 497ms (1541 modules)
- ✓ Compiled in 437ms (1541 modules)
- ✓ Compiled in 390ms (1541 modules)
- ✓ Compiled in 423ms (1541 modules)
- ✓ Compiled in 406ms (1541 modules)
- ✓ Compiled in 266ms (1527 modules)
- GET /town/123 200 in 159ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 1418ms (1530 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1662ms
- ✓ Compiled in 668ms (1541 modules)
- ✓ Compiled in 505ms (1541 modules)
- ✓ Compiled in 664ms (1541 modules)
- GET /town/123 200 in 284ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 1000ms (1530 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1185ms
- ✓ Compiled in 3s (1544 modules)
- ✓ Compiled in 884ms (1541 modules)
- ✓ Compiled in 705ms (1527 modules)
- GET /town/123 200 in 160ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 579ms (1530 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 688ms
- ✓ Compiled in 698ms (1544 modules)
- ✓ Compiled in 598ms (1530 modules)
- ✓ Compiled in 528ms (1544 modules)
- ✓ Compiled in 638ms (1544 modules)
- ✓ Compiled in 530ms (1544 modules)
- GET /town/123 200 in 157ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 171ms
- ✓ Compiled in 710ms (1544 modules)
- ✓ Compiled in 318ms (1541 modules)
- GET /town/123 200 in 147ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 3.2s (1530 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 3266ms
- GET /town/123 200 in 103ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 204ms
- ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- ✓ Compiled in 801ms (1544 modules)
- GET /town/123 200 in 148ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 63ms
- ✓ Compiled in 374ms (1530 modules)
- GET /town/123 200 in 113ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 202ms
- ✓ Compiled in 520ms (1544 modules)
- ✓ Compiled in 329ms (1544 modules)
+ ✓ Compiled in 561ms (1543 modules)
+ ✓ Compiled in 215ms (1543 modules)
+ GET /town/123 200 in 85ms
+ ✓ Compiled /_not-found in 225ms (1546 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 276ms
+ ✓ Compiled in 428ms (1543 modules)
+ GET /town/123 200 in 252ms
+ ✓ Compiled /_not-found in 212ms (1546 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 291ms
+ ✓ Compiled in 684ms (1557 modules)
+ ✓ Compiled in 191ms (1543 modules)
+ ✓ Compiled in 263ms (1557 modules)
+ ✓ Compiled in 335ms (1557 modules)
+ ✓ Compiled in 775ms (1537 modules)
+ ✓ Compiled in 222ms (1551 modules)
+ ✓ Compiled in 364ms (1537 modules)
+ ✓ Compiled in 193ms (1537 modules)
+ ✓ Compiled in 230ms (1537 modules)
+ ✓ Compiled in 222ms (1537 modules)
+ ✓ Compiled in 385ms (1551 modules)
+ ✓ Compiled in 252ms (1551 modules)
+ ✓ Compiled in 392ms (1551 modules)
+ ✓ Compiled in 219ms (1537 modules)
+ ✓ Compiled in 310ms (1551 modules)
+ ✓ Compiled in 283ms (1551 modules)
+ ✓ Compiled in 294ms (1551 modules)
  GET /town/123 200 in 108ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 143ms
- ✓ Compiled in 700ms (1541 modules)
- GET /town/123 200 in 109ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 508ms (1530 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 642ms
- ✓ Compiled in 473ms (1544 modules)
- ✓ Compiled in 453ms (1544 modules)
- ✓ Compiled in 593ms (1544 modules)
- ✓ Compiled in 290ms (1527 modules)
- GET /town/123 200 in 256ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 942ms (1530 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1077ms
- ✓ Compiled in 901ms (1544 modules)
- ✓ Compiled in 355ms (1544 modules)
- ✓ Compiled in 495ms (1544 modules)
- ✓ Compiled in 550ms (1541 modules)
- ✓ Compiled in 562ms (1541 modules)
- ✓ Compiled in 345ms (1541 modules)
- ✓ Compiled in 482ms (1541 modules)
- ✓ Compiled in 574ms (1541 modules)
- ✓ Compiled in 444ms (1541 modules)
- GET /town/123 200 in 204ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 890ms (1530 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1026ms
- ✓ Compiled in 502ms (1544 modules)
- ✓ Compiled in 389ms (1544 modules)
- ✓ Compiled in 364ms (1544 modules)
- ✓ Compiled in 495ms (1544 modules)
- ✓ Compiled in 718ms (1544 modules)
- GET /town/123 200 in 99ms
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 158ms
- ✓ Compiled in 577ms (1544 modules)
- ✓ Compiled in 576ms (1541 modules)
- ✓ Compiled in 343ms (1541 modules)
- ✓ Compiled in 458ms (1541 modules)
- ✓ Compiled in 583ms (1541 modules)
- ✓ Compiled in 453ms (1541 modules)
- ✓ Compiled in 1012ms (1541 modules)
- ⨯ ./src/components/canvas/CanvasContainer.tsx
+ ✓ Compiled in 458ms (1551 modules)
+ ✓ Compiled in 683ms (1551 modules)
+ GET /town/123 200 in 89ms
+ ✓ Compiled in 574ms (1551 modules)
+ ✓ Compiled in 173ms (688 modules)
+ ✓ Compiled in 411ms (1551 modules)
+ ✓ Compiled in 272ms (1551 modules)
+ ✓ Compiled in 234ms (1551 modules)
+ ⨯ ./src/components/canvas/layers/EditBuildingLayer.tsx
 Error: 
-  [31mx[0m Unexpected token `div`. Expected jsx identifier
-     ,-[[36;1;4m/home/irke/irke-town/src/components/canvas/CanvasContainer.tsx[0m:124:1]
- [2m124[0m |   }
- [2m125[0m | 
- [2m126[0m |   return (
- [2m127[0m |     <div className="w-full h-full relative" onClick={handleCanvasClick}>
-     : [31;1m     ^^^[0m
- [2m128[0m |       <Suspense fallback={
- [2m129[0m |         <div className="w-full h-full bg-gray-100 flex items-center justify-center">
- [2m130[0m |           <p className="text-gray-400">캔버스 로딩 중...</p>
+  [31mx[0m Expected ',', got '{'
+     ,-[[36;1;4m/home/irke/irke-town/src/components/canvas/layers/EditBuildingLayer.tsx[0m:296:1]
+ [2m296[0m |         )
+ [2m297[0m |       })}
+ [2m298[0m |     </Container>
+ [2m299[0m |     {contextMenu && typeof document !== 'undefined' && createPortal(
+     : [31;1m    ^[0m
+ [2m300[0m |       <ContextMenu
+ [2m301[0m |         position={contextMenu.position}
+ [2m302[0m |         buildingId={contextMenu.buildingId}
      `----
 
 Caused by:
     Syntax Error
 
 Import trace for requested module:
+./src/components/canvas/layers/EditBuildingLayer.tsx
+./src/components/canvas/TownCanvas.tsx
+./src/lib/dynamic.ts
 ./src/components/canvas/CanvasContainer.tsx
-./src/app/town/[id]/page.tsx
- ○ Compiling /_error ...
- ✓ Compiled /_error in 7.4s (1754 modules)
- GET /town/123 200 in 219ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 1164ms (1757 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1335ms
- ✓ Compiled in 570ms (1771 modules)
- ✓ Compiled in 521ms (1771 modules)
- ✓ Compiled in 1062ms (1766 modules)
- ✓ Compiled in 462ms (1766 modules)
- ✓ Compiled in 782ms (1766 modules)
- ✓ Compiled in 402ms (1766 modules)
- ✓ Compiled in 358ms (1766 modules)
- ✓ Compiled in 513ms (1766 modules)
- ✓ Compiled in 368ms (1766 modules)
- ✓ Compiled in 212ms (867 modules)
- ✓ Compiled in 233ms (867 modules)
- ✓ Compiled in 234ms (867 modules)
- ✓ Compiled in 392ms (1766 modules)
- ✓ Compiled in 421ms (1766 modules)
- ✓ Compiled in 173ms (867 modules)
- ✓ Compiled in 174ms (867 modules)
- ✓ Compiled in 275ms (867 modules)
- ✓ Compiled in 229ms (867 modules)
- ✓ Compiled in 1048ms (1766 modules)
- ✓ Compiled in 674ms (1766 modules)
- GET /town/123 200 in 165ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 1591ms (1755 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 4712ms
- ✓ Compiled in 1107ms (1766 modules)
- GET /town/123 200 in 174ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 948ms (1755 modules)
- GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1196ms
- ✓ Compiled in 1796ms (1752 modules)
- ✓ Compiled in 878ms (1752 modules)
- GET /town/123 200 in 263ms
- ✓ Compiled in 961ms (1766 modules)
- ✓ Compiled in 491ms (1766 modules)
- ✓ Compiled in 488ms (1752 modules)
- ✓ Compiled in 436ms (1766 modules)
+ ✓ Compiled in 281ms (1553 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 470ms (1553 modules)
+ GET /town/123 200 in 299ms
+ ✓ Compiled in 228ms (1553 modules)
+ GET /town/123 200 in 101ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 570ms (1553 modules)
+ GET /town/123 200 in 326ms
+ ✓ Compiled in 277ms (1553 modules)
+ ✓ Compiled in 424ms (1553 modules)
+ ✓ Compiled in 360ms (1551 modules)
+ ✓ Compiled in 417ms (1551 modules)
+ ✓ Compiled in 246ms (1551 modules)
+ ⨯ ./src/components/canvas/layers/EditBuildingLayer.tsx
+Error: 
+  [31mx[0m Expected ',', got '{'
+     ,-[[36;1;4m/home/irke/irke-town/src/components/canvas/layers/EditBuildingLayer.tsx[0m:295:1]
+ [2m295[0m |         )
+ [2m296[0m |       })}
+ [2m297[0m |     </Container>
+ [2m298[0m |     {contextMenu && typeof document !== 'undefined' && createPortal(
+     : [31;1m    ^[0m
+ [2m299[0m |       <ContextMenu
+ [2m300[0m |         position={contextMenu.position}
+ [2m301[0m |         buildingId={contextMenu.buildingId}
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/canvas/layers/EditBuildingLayer.tsx
+./src/components/canvas/TownCanvas.tsx
+./src/lib/dynamic.ts
+./src/components/canvas/CanvasContainer.tsx
+ ✓ Compiled in 291ms (1551 modules)
+ ✓ Compiled in 473ms (1551 modules)
+ GET /town/123 200 in 105ms
+ ✓ Compiled in 389ms (1551 modules)
+ ✓ Compiled in 369ms (1537 modules)
+ ✓ Compiled in 167ms (1537 modules)
+ ✓ Compiled in 312ms (1551 modules)
+ ✓ Compiled in 334ms (1551 modules)
+ ✓ Compiled in 337ms (1553 modules)
+ ✓ Compiled in 266ms (1553 modules)
+ GET /town/123 200 in 113ms
+ ✓ Compiled in 537ms (1553 modules)
+ ✓ Compiled in 251ms (1553 modules)
+ ✓ Compiled in 333ms (1553 modules)
+ GET /town/123 200 in 99ms
+ ✓ Compiled /_not-found in 387ms (1542 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 457ms
+ ✓ Compiled in 269ms (1556 modules)
+ ✓ Compiled in 266ms (1556 modules)
+ GET /town/123 200 in 75ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 27ms
+ ✓ Compiled in 427ms (1556 modules)
+ ✓ Compiled in 269ms (1556 modules)
+ ✓ Compiled in 527ms (1556 modules)
+ GET /town/123 200 in 94ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 33ms
+ ✓ Compiled in 312ms (1556 modules)
+ ✓ Compiled in 512ms (1556 modules)
+ ✓ Compiled in 317ms (1554 modules)
+ ✓ Compiled in 291ms (1556 modules)
+ GET /town/123 200 in 83ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 28ms
+ ✓ Compiled in 417ms (1556 modules)
+ ✓ Compiled in 289ms (1553 modules)
+ ✓ Compiled in 279ms (1553 modules)
+ ✓ Compiled in 305ms (1553 modules)
+ ✓ Compiled in 289ms (1553 modules)
+ ✓ Compiled in 304ms (1553 modules)
+ ✓ Compiled in 322ms (1553 modules)
+ ✓ Compiled in 444ms (1553 modules)
+ ✓ Compiled in 300ms (1553 modules)
+ GET /town/123 200 in 121ms
+ ✓ Compiled /_not-found in 320ms (1542 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 389ms
+ ✓ Compiled in 503ms (1553 modules)
+ ✓ Compiled in 289ms (1553 modules)
+ GET /town/123 200 in 113ms
+ ✓ Compiled /_not-found in 252ms (1542 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 308ms
+ ✓ Compiled in 338ms (1556 modules)
+ ✓ Compiled in 575ms (1556 modules)
+ ✓ Compiled in 380ms (1553 modules)
+ ✓ Compiled in 265ms (1553 modules)
+ ✓ Compiled in 316ms (1553 modules)
+ GET /town/123 200 in 115ms
+ ✓ Compiled /_not-found in 262ms (1542 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 330ms
+ ✓ Compiled in 318ms (1556 modules)
+ ✓ Compiled in 299ms (1553 modules)
+ ✓ Compiled in 291ms (1553 modules)
+ ✓ Compiled in 251ms (1553 modules)
+ ✓ Compiled in 230ms (1553 modules)
+ ✓ Compiled in 298ms (1553 modules)
+ ✓ Compiled in 463ms (1553 modules)
+ ✓ Compiled in 563ms (1553 modules)
+ ✓ Compiled in 515ms (1539 modules)
+ ✓ Compiled in 188ms (1539 modules)
+ ✓ Compiled in 176ms (1539 modules)
+ ✓ Compiled in 225ms (1539 modules)
+ ✓ Compiled in 625ms (1553 modules)
+ ✓ Compiled in 522ms (1553 modules)
+ ✓ Compiled in 299ms (1553 modules)
+ ✓ Compiled in 328ms (1553 modules)
+ ✓ Compiled in 366ms (1553 modules)
+ ✓ Compiled in 374ms (1553 modules)
+ ✓ Compiled in 239ms (1539 modules)
+ ✓ Compiled in 447ms (1553 modules)
+ ✓ Compiled in 344ms (1553 modules)
+ ✓ Compiled in 248ms (1553 modules)
+ ✓ Compiled in 2.7s (1553 modules)
+ ✓ Compiled in 441ms (1553 modules)
+ ✓ Compiled in 296ms (1553 modules)
+ GET /town/123 200 in 122ms
+ ✓ Compiled /_not-found in 320ms (1542 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 391ms
+ ✓ Compiled in 575ms (1553 modules)
+ ✓ Compiled in 377ms (1553 modules)
+ ✓ Compiled in 501ms (1553 modules)
+ ✓ Compiled in 319ms (1553 modules)
+ ✓ Compiled in 308ms (1553 modules)
+ ✓ Compiled in 353ms (1539 modules)
+ ✓ Compiled in 209ms (1539 modules)
+ ✓ Compiled in 183ms (1539 modules)
+ ✓ Compiled in 419ms (1539 modules)
+ ✓ Compiled in 208ms (1539 modules)
+ ✓ Compiled in 203ms (1539 modules)
+ ✓ Compiled in 347ms (1553 modules)
+ ✓ Compiled in 335ms (1553 modules)
+ ✓ Compiled in 378ms (1553 modules)
+ ✓ Compiled in 438ms (1553 modules)
+ ✓ Compiled in 395ms (1553 modules)
+ ✓ Compiled in 351ms (1553 modules)
+ ✓ Compiled in 281ms (1553 modules)
+ GET /town/123 200 in 143ms
+ ✓ Compiled /_not-found in 488ms (1542 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 582ms
+ ✓ Compiled in 591ms (1553 modules)
+ ✓ Compiled in 356ms (1539 modules)
+ ✓ Compiled in 214ms (1539 modules)
+ ✓ Compiled in 261ms (1539 modules)
+ GET /town/123 200 in 140ms

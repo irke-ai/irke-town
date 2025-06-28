@@ -3,9 +3,15 @@
 import { useBuildingStore } from '@/stores/buildingStore'
 import { BUILDING_TEMPLATES, BuildingType } from '@/types/building'
 
+import { useUIStore } from '@/stores/uiStore'
+
 export default function BuildingPalette() {
   const placingBuildingType = useBuildingStore((state) => state.placingBuildingType)
   const setPlacingBuildingType = useBuildingStore((state) => state.setPlacingBuildingType)
+  const editMode = useUIStore((state) => state.editMode)
+  
+  // 편집 모드에서만 표시
+  if (editMode !== 'edit') return null
   
   return (
     <div className="absolute top-4 left-4 bg-white rounded-lg shadow-lg p-4">

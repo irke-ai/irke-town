@@ -70,25 +70,35 @@ export default function BuildingTooltip({ mousePosition }: BuildingTooltipProps)
               {template.name}
             </p>
           </div>
-          {isSelected ? (
-            <div className="space-x-1">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-2 py-1 rounded text-xs">
+          {editMode === 'preview' ? (
+            // 프리뷰 모드: 정보 수정 버튼만
+            isSelected && (
+              <button className="bg-gray-600 hover:bg-gray-700 text-white px-2 py-1 rounded text-xs">
+                정보 수정
+              </button>
+            )
+          ) : (
+            // 편집 모드: 편집/삭제 버튼 (이 경우는 실제로 실행되지 않음)
+            isSelected ? (
+              <div className="space-x-1">
+                <button className="bg-blue-600 hover:bg-blue-700 text-white px-2 py-1 rounded text-xs">
+                  편집
+                </button>
+                <button 
+                  onClick={handleDelete}
+                  className="bg-red-600 hover:bg-red-700 text-white px-2 py-1 rounded text-xs"
+                >
+                  삭제
+                </button>
+              </div>
+            ) : (
+              <button
+                onClick={() => handleEdit(building.id)}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-2 py-1 rounded text-xs transition-colors"
+              >
                 편집
               </button>
-              <button 
-                onClick={handleDelete}
-                className="bg-red-600 hover:bg-red-700 text-white px-2 py-1 rounded text-xs"
-              >
-                삭제
-              </button>
-            </div>
-          ) : (
-            <button
-              onClick={() => handleEdit(building.id)}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-2 py-1 rounded text-xs transition-colors"
-            >
-              편집
-            </button>
+            )
           )}
         </div>
         

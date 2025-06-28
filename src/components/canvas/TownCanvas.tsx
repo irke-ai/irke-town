@@ -12,10 +12,14 @@ import EditBuildingLayer from './layers/EditBuildingLayer'
 import PreviewBuildingLayer from './layers/PreviewBuildingLayer'
 import PlacementPreviewLayer from './layers/PlacementPreviewLayer'
 import CellHoverLayer from './layers/CellHoverLayer'
+import ConnectionLayer from './layers/ConnectionLayer'
+import ConnectionPreviewLayer from './layers/ConnectionPreviewLayer'
 import BuildingTooltip from './BuildingTooltip'
 import Minimap from './Minimap'
 import CoordinateDisplay from './CoordinateDisplay'
 import DebugOverlay from './DebugOverlay'
+import ContextMenu from '@/components/ui/ContextMenu'
+import { useUIStore } from '@/stores/uiStore'
 
 interface TownCanvasProps {
   zoom: number
@@ -34,6 +38,8 @@ export default function TownCanvas({ zoom, onCellClick, onCellHover }: TownCanva
   const dragStart = useRef({ x: 0, y: 0 })
   const lastOffset = useRef({ x: 0, y: 0 })
   const selectBuilding = useBuildingStore((state) => state.selectBuilding)
+  const contextMenu = useUIStore((state) => state.contextMenu)
+  const setContextMenu = useUIStore((state) => state.setContextMenu)
 
   // 캔버스 크기 자동 조정
   useEffect(() => {
@@ -118,6 +124,7 @@ export default function TownCanvas({ zoom, onCellClick, onCellHover }: TownCanva
     <div 
       ref={stageRef} 
       className="w-full h-full"
+      style={{ position: 'relative' }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
@@ -153,17 +160,29 @@ export default function TownCanvas({ zoom, onCellClick, onCellHover }: TownCanva
               g.endFill()
             }}
             eventMode="static"
-            pointerdown={() => {
-              selectBuilding(null)
+            pointerdown={(event) => {
+              const point = event.data.global
+              const x = (point.x - dimensions.width / 2 - viewOffset.x) / zoom
+              const y = (point.y - dimensions.height / 4 - viewOffset.y) / zoom
+              const gridPos = screenToGrid(x, y)
+              
+              if (isValidGridPosition(gridPos.x, gridPos.y)) {
+                onCellClick(gridPos.x, gridPos.y)
+              }
+              
+              useBuildingStore.getState().clearSelection()
+              useBuildingStore.getState().selectConnection(null, null)
             }}
             zIndex={0}
           />
           <GridLayer />
           <CellHoverLayer hoveredCell={hoveredCell} />
+          <ConnectionLayer />
           <BuildingLayer />
           <EditBuildingLayer />
           <PreviewBuildingLayer />
           <PlacementPreviewLayer hoveredCell={hoveredCell} />
+          <ConnectionPreviewLayer />
         </Container>
       </Stage>
       <Minimap 
@@ -177,6 +196,17 @@ export default function TownCanvas({ zoom, onCellClick, onCellHover }: TownCanva
       />
       <DebugOverlay />
       <BuildingTooltip mousePosition={mousePosition} />
+      
+      {/* 우클릭 메뉴 */}
+      {contextMenu && (
+        <ContextMenu
+          position={contextMenu.position}
+          buildingId={contextMenu.buildingId}
+          multiSelect={contextMenu.multiSelect}
+          selectedIds={contextMenu.selectedIds}
+          onClose={() => setContextMenu(null)}
+        />
+      )}
     </div>
   )
 }
